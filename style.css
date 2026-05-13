@@ -1,0 +1,161 @@
+/* --- FUNDAL ȘI FONTURI --- */
+:root {
+    --primary: #f8da1c;
+    --secondary: #e22b2b;
+    --accent: #20d6ff;
+    --dark: #0f172a;
+    --darker: #020617;
+    --glass: rgba(255, 255, 255, 0.05);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--darker);
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .btn { font-family: 'Bungee', cursive; }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+.section-padding { padding: 80px 0; }
+
+.bg-darker { background-color: rgba(0, 0, 0, 0.3); }
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: var(--primary);
+    text-shadow: 3px 3px var(--secondary);
+}
+
+/* --- HEADER --- */
+header {
+    background: rgba(2, 6, 23, 0.95);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid var(--primary);
+}
+
+.nav-flex { display: flex; justify-content: space-between; align-items: center; }
+
+.logo span { color: var(--secondary); }
+
+nav ul { list-style: none; display: flex; gap: 20px; }
+
+nav ul li a { color: #fff; text-decoration: none; text-transform: uppercase; font-size: 0.9rem; transition: 0.3s; }
+
+nav ul li a:hover { color: var(--primary); }
+
+/* --- HERO --- */
+.hero {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('hero.jpg');
+    background-size: cover;
+}
+
+.hero h2 { font-size: 3.5rem; margin-bottom: 20px; }
+
+.btn {
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn-primary { background: var(--primary); color: #000; border: none; }
+
+.btn-outline { border: 2px solid #fff; color: #fff; margin-left: 10px; }
+
+/* --- CARDURI BRAWLERI --- */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.glass-card {
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.glass-card:hover { transform: translateY(-10px); border-color: var(--primary); }
+
+.card-image { position: relative; height: 220px; background: rgba(255,255,255,0.05); }
+
+.card-image img { width: 100%; height: 100%; object-fit: contain; padding: 20px; }
+
+.rarity-badge {
+    position: absolute; top: 10px; left: 10px;
+    padding: 4px 12px; border-radius: 4px; font-size: 0.7rem; font-weight: bold;
+}
+
+.legendary { background: #ffce00; color: #000; }
+.mythic { background: #ff4e4e; }
+.epic { background: #d000ff; }
+.rare { background: #22c55e; }
+
+.card-content { padding: 20px; }
+
+.stats-bar { background: #334155; height: 10px; border-radius: 5px; margin: 10px 0; }
+
+.fill { background: var(--accent); height: 100%; border-radius: 5px; }
+
+/* --- MODURI --- */
+.mode-card-long {
+    display: flex; align-items: center; background: var(--glass);
+    padding: 20px; margin-bottom: 20px; border-radius: 10px;
+}
+
+.mode-icon { font-size: 2.5rem; margin-right: 25px; }
+
+.neon-blue { border-left: 5px solid var(--accent); }
+
+.neon-red { border-left: 5px solid var(--secondary); }
+
+/* --- FAQ --- */
+.faq-list { max-width: 800px; margin: 0 auto; }
+
+.faq-item { margin-bottom: 25px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; }
+
+.faq-item h4 { color: var(--primary); margin-bottom: 10px; }
+
+/* --- CONTACT --- */
+.contact-box { padding: 40px; max-width: 600px; margin: 0 auto; }
+
+input, textarea {
+    width: 100%; padding: 12px; margin-bottom: 15px;
+    background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+    color: #fff; border-radius: 5px;
+}
+
+/* --- GO TO UP BUTTON --- */
+#goToTopBtn {
+    display: none; position: fixed; bottom: 30px; right: 30px;
+    background: var(--primary); border: none; width: 50px; height: 50px;
+    border-radius: 50%; font-size: 1.5rem; cursor: pointer; z-index: 2000;
+}
+
+/* --- FOOTER --- */
+footer { background: #000; padding: 60px 0 20px; border-top: 3px solid var(--secondary); }
+
+.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; }
+
+.footer-bottom { text-align: center; margin-top: 40px; border-top: 1px solid #222; padding-top: 20px; font-size: 0.8rem; }
